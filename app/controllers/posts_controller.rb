@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   end
   
   def create
-    render text: params[:post].inspect
+    @post = Post.new(params[:post])
+    
+    @post.save
+    redirect_to action: :show, id: @post.id
   end
 end
