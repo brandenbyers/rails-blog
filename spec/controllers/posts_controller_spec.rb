@@ -21,6 +21,10 @@ describe PostsController do
       get :index
       expect(response).to be_success
     end
+    
+    it "assigns @posts to Post.all" do
+      get :index
+      expect(assigns[:posts]).to eq Post.all
+    end
   end
-  
 end
