@@ -9,6 +9,12 @@ require 'spec_helper'
      expect(page).to have_content('Rails is Awesome!')
    end
    
+   scenario 'can get back to llist page from new page' do
+     visit new_post_path
+     click_link 'Back'
+     expect(current_path).to eq posts_path
+   end
+   
    scenario 'can be accessed from link on home page' do
      visit root_path
      click_link 'My Blog'
