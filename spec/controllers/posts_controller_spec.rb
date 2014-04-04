@@ -9,4 +9,11 @@ describe PostsController do
     end
   end
   
+  describe 'POST #create' do
+    it "redirects to the :show view" do
+      post :create, post: { title: 'title', text: 'text' }
+      expect(response).to redirect_to assigns[:post]
+    end
+  end
+  
 end
