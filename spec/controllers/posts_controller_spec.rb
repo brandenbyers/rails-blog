@@ -10,9 +10,18 @@ describe PostsController do
   end
   
   describe 'POST #create' do
-    it "redirects to the :show view" do
-      post :create, post: { title: 'title', text: 'text' }
-      expect(response).to redirect_to assigns[:post]
+    context 'when the post is valid' do
+      it "redirects to the :show view" do
+        post :create, post: { title: 'title', text: 'text' }
+        expect(response).to redirect_to assigns[:post]
+      end
+    end
+    
+    context 'when the post is not valid' do
+      it "renders the :new view" do
+        post :create, post: { title: '', text: 'text' }
+        expect(response).to render_template :new
+      end
     end
   end
   
