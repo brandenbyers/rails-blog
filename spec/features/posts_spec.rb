@@ -36,14 +36,22 @@ require 'spec_helper'
    
    context 'when there are posts' do
      before do
-       create :post, title: 'My first post'
-       create :post, title: 'My second post'
+       @post1 = create :post, title: 'My first post'
+       @post2 = create :post, title: 'My second post'
      end
      
      scenario 'can be listed' do
        visit posts_path
        expect(page).to have_content('My first post')
        expect(page).to have_content('My second post')
+     end
+     
+     scenario 'can be edited' do
+       visit edit_post_path(@post1)
+       fill_in 'Title', with: 'My first post has a new title'
+       click_button 'Save Post'
+       expect(current_path).to eq post_path(@post1)
+       expect(page).to have_content('My first post has a new title')
      end
      
      scenario 'can get back to list page from show page' do
