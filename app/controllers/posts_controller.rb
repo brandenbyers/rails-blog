@@ -8,4 +8,8 @@ class PostsController < ApplicationController
     @post.save
     redirect_to @post
   end
+  
+  def show
+    @posts = Post.find(params[:id])
+  end
 end
