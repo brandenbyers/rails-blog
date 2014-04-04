@@ -6,7 +6,14 @@ require 'spec_helper'
      fill_in 'Title', with: 'Rails is Awesome!'
      fill_in 'Text', with: 'It really is.'
      click_button 'Save Post'
-     expect(page).to have_content('Rails is Awesome!')
+     expect(current_path).to eq post_path(Post.where(title: 'Rails is Awesome!').first)
+   end
+   
+   scenario 'cannot be created without a title' do
+     visit new_post_path
+     fill_in 'Title', with: ''
+     click_button 'Save Post'
+     expect(page).to have_content("Title can't be blank")
    end
    
    scenario 'can get back to llist page from new page' do
