@@ -38,5 +38,11 @@ require 'spec_helper'
        expect(page).to have_content('My first post')
        expect(page).to have_content('My second post')
      end
+     
+     scenario 'can get back to list page from show page' do
+       visit post_path(Post.first)
+       click_link 'Back'
+       expect(current_path).to eq posts_path
+     end
    end
  end
