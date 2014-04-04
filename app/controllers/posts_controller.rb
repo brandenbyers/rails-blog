@@ -3,9 +3,9 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(params[:post].permit(:title, :text))
     
     @post.save
-    redirect_to action: :show, id: @post.id
+    redirect_to @post
   end
 end
