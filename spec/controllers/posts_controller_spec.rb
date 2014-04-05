@@ -26,9 +26,18 @@ describe PostsController do
     end
 
     describe 'PATCH #update' do
-      it "redirects to the :show view" do
-        patch :update, id: post.id, post: { title: 'change it' }
-        expect(response).to redirect_to post_path(post)
+      context 'when the post is valid' do
+        it "redirects to the :show view" do
+          patch :update, id: post.id, post: { title: 'change it' }
+          expect(response).to redirect_to post_path(post)
+        end
+      end
+      
+      context 'when the post is not valid' do
+        it "renders the :new view" do
+          patch :update, id: post.id, post: { title: '' }
+          expect(response).to render_template :edit
+        end
       end
     end
     
