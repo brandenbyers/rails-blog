@@ -25,8 +25,15 @@ describe PostsController do
         expect(response).to redirect_to post_path(post)
       end
     end
+    
+    describe 'DELETE #destroy' do
+      it "redirects to the :index view" do
+        delete :destroy, id: post.id
+        expect(response).to redirect_to posts_path
+      end
+    end
   end
-  
+    
   describe 'POST #create' do
     context 'when the post is valid' do
       it "redirects to the :show view" do

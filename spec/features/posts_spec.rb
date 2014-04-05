@@ -40,6 +40,16 @@ require 'spec_helper'
        @post2 = create :post, title: 'My second post'
      end
      
+     scenario 'can be deleted from link on posts page', js: true do
+       visit posts_path
+       within 'tr:last-child' do
+         page.driver.accept_js_confirms!
+         click_link 'Destroy'
+         expect(current_path).to eq posts_path
+         expect(page).not_to have_content('My second post')
+       end
+     end
+     
      scenario 'can be edited from link on posts page' do
        visit posts_path
          within 'tr:last-child' do
