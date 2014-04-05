@@ -36,9 +36,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara-webkit'
   gem 'factory_girl_rails'
+  gem 'jazz_hands'
 end
  
 group :test do
+  gem 'launchy'
   gem 'valid_attribute'
 end
 
