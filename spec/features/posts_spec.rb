@@ -40,6 +40,22 @@ require 'spec_helper'
        @post2 = create :post, title: 'My second post'
      end
      
+     scenario 'can be edited from link on posts page' do
+       visit posts_path
+         within 'tr:last-child' do
+           click_link 'Edit'
+           expect(current_path).to eq edit_post_path(@post2)
+         end
+       end
+
+     scenario 'can be viewed from link on posts page' do
+       visit posts_path
+         within 'tr:last-child' do
+           click_link 'Show'
+           expect(current_path).to eq post_path(@post2)
+         end
+     end
+     
      scenario 'can be listed' do
        visit posts_path
        expect(page).to have_content('My first post')
@@ -58,6 +74,12 @@ require 'spec_helper'
        visit post_path(Post.first)
        click_link 'Back'
        expect(current_path).to eq posts_path
+     end
+     
+     scenario 'can be edited from show page' do
+       visit post_path(Post.first)
+       click_link 'Edit'
+       expect(current_path).to eq edit_post_path(Post.first)
      end
    end
  end
