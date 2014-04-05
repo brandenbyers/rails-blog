@@ -9,6 +9,24 @@ describe PostsController do
     end
   end
   
+  context 'when there is a post' do
+    let(:post) { create :post }
+
+    describe 'GET #edit' do
+      it "returns http success" do
+       get :edit, id: post.id
+       expect(response).to be_success
+      end
+    end
+
+    describe 'PATCH #update' do
+      it "redirects to the :show view" do
+        patch :update, id: post.id, post: { title: 'change it' }
+        expect(response).to redirect_to post_path(post)
+      end
+    end
+  end
+  
   describe 'POST #create' do
     context 'when the post is valid' do
       it "redirects to the :show view" do
