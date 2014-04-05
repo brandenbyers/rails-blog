@@ -5,14 +5,14 @@ require 'spec_helper'
      visit new_post_path
      fill_in 'Title', with: 'Rails is Awesome!'
      fill_in 'Text', with: 'It really is.'
-     click_button 'Save Post'
+     click_button 'Create Post'
      expect(current_path).to eq post_path(Post.where(title: 'Rails is Awesome!').first)
    end
    
    scenario 'cannot be created without a title' do
      visit new_post_path
      fill_in 'Title', with: ''
-     click_button 'Save Post'
+     click_button 'Create Post'
      expect(page).to have_content("Title can't be blank")
    end
    
@@ -65,7 +65,7 @@ require 'spec_helper'
      scenario 'can be edited' do
        visit edit_post_path(@post1)
        fill_in 'Title', with: 'My first post has a new title'
-       click_button 'Save Post'
+       click_button 'Update Post'
        expect(current_path).to eq post_path(@post1)
        expect(page).to have_content('My first post has a new title')
      end
