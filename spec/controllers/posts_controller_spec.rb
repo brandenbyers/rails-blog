@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe PostsController do
   
+  include AuthHelper
+ 
+  before(:each) do
+    http_login
+  end
+  
   describe 'GET #new' do
     it "returns http success" do
       get :new
