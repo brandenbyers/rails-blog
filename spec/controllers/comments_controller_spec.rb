@@ -10,5 +10,16 @@ describe CommentsController do
         expect(response).to redirect_to post_path(my_post)
       end
     end
+    
+    context 'with a comment' do
+      let(:comment) { create :comment, post: my_post }
+
+      describe 'DELETE #destroy' do
+        it "redirects to the post's :show view" do
+          delete :destroy, post_id: my_post.id, id: comment.id
+          expect(response).to redirect_to post_path(my_post)
+        end
+      end
+    end
   end
 end

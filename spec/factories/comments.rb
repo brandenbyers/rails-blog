@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :comment do
     commenter "MyString"
     body "MyText"
-    post nil
+    post
   end
 end
