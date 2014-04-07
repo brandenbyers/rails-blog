@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'turbolinks'
