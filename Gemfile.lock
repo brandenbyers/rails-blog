@@ -221,7 +221,7 @@ DEPENDENCIES
   launchy
   rails (= 4.0.4)
   rspec-rails
-  sass-rails (~> 4.0.2)
+  sass-rails (~> 4.0.0)
   sdoc
   shoulda-matchers
   simplecov
