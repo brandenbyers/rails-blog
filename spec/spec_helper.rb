@@ -43,4 +43,5 @@
    #     --seed 1234
    config.order = "random"
    config.include FactoryGirl::Syntax::Methods
+   config.include Devise::TestHelpers, type: :controller
  end
