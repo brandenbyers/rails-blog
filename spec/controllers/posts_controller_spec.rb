@@ -14,7 +14,7 @@ describe PostsController do
   end
   
   context 'when there is a post' do
-    let(:post) { create :post }
+    let(:post) { create :post, user: user }
 
     describe 'GET #edit' do
       it "returns http success" do

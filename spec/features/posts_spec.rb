@@ -36,8 +36,8 @@ feature 'Posts' do
 
     context 'when there are posts' do
       before do
-        @post1 = create :post, title: 'My first post'
-        @post2 = create :post, title: 'My second post'
+        @post1 = create :post, title: 'My first post', user: user
+        @post2 = create :post, title: 'My second post', user: user
       end
 
       scenario 'can be edited from link on posts page' do
