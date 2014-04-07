@@ -1,8 +1,12 @@
 require 'spec_helper'
  
  feature 'Comments' do
+   let(:user) { create :user }
+   
    background do
-     @comment = build :comment, body: 'This is the comment'
+     log_in user
+     
+     @comment = build :comment, body: 'This is the comment', user: user
      @post = create :post
      @post.comments << @comment
      @post.save
