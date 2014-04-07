@@ -42,7 +42,7 @@ feature 'Posts' do
 
       scenario 'can be edited from link on posts page' do
         visit posts_path
-        within 'tr:last-child' do
+        within 'tr:last' do
           click_link 'Edit'
           expect(current_path).to eq edit_post_path(@post2)
         end
@@ -89,7 +89,7 @@ feature 'Posts' do
 
       scenario 'can be viewed from link on posts page' do
         visit posts_path
-        within 'tr:last-child' do
+        within 'tr:last' do
           click_link 'Show'
           expect(current_path).to eq post_path(@post2)
         end
