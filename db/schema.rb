@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140407113353) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
