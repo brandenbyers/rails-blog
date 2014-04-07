@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
-    email { "user-#{SecureRandom.hex(8)@example.com}" }
+    email { "user-#{SecureRandom.hex(8)}@example.com" }
     password "password"
   end
 end
