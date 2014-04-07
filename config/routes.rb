@@ -1,7 +1,8 @@
 Blog::Application.routes.draw do
-    resources :posts do
-      resources :comments
-    end
+  devise_for :users
+  resources :posts do
+    resources :comments
+  end
     
-    root 'welcome#index'
+  root 'welcome#index'
 end
