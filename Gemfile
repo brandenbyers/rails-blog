@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.4'
 
+gem 'chamber', '2.2.1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'jquery-rails'
