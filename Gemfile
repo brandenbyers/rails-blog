@@ -4,6 +4,7 @@ gem 'rails', '4.0.4'
 
 gem 'chamber', '2.2.1'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'delayed_job_active_record'
 gem 'devise'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
