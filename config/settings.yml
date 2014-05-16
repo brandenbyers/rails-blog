@@ -1,14 +1,11 @@
+---
 development:
-  setting:                development_value
-  # The following will become 'secure_setting'
-  _secure_secure_setting: secure_development_value
-
+  setting: development_value
+  _secure_SENDGRID_USERNAME: axtQI6ov18Fp6ctiw21OkJJ4napxtnvYXFviohQmkAYfu/eiR51feqYfh92Jrx05GEVB8lWq6oXX8QtGYByQ6atbwgLf1QegOb5ybilVIaDkSP1LniOqSG/ybaYQ7imwRSQhxv5YHBVmlepZksPkaTf/AL7toiZxu5MjWy7lKU9Z732dwdRkv1Nj5qzmxkJHh33mn1HIaH5oYX30Vyh8r5gjJkcXUIMdW9YY86u7pLXExIoxUNFo5ONqc25Pm+5rtHupE0U82lGuIYnDpta37g9gnSjlzs5E4N5lviwO6l3kvh9fz897N0nMulSMLD/Cg4xA40JZsBFeGLA7HhUvdA==
+  _secure_SENDGRID_PASSWORD: MWm8Pr4hnk83Sru87Pz9Rq7B5Abp/14anzNxQRs0Uquw8AxFleXIj46b2A8kNo0gAyjGrGw47vVREEvPalYRR4B2UOVB7olfbP7lyjOv6/JTHw6YaUT01qA40Ut6clAtAoqFGJqA8C1CWlqE2v9nKNq0kZWcOjRL/4lUQQLEtP6CGVKRkqYT8V+3mLVAtXoRJfz7HAzgRqUddfCf/nNQDlec27GW1+OAgP2nNQdTDRODtIjPvdjW91uSf4nRKxn0t4d/qc4Wtyt1lWruebirYVy0d9U/iOCxwjXGJ6NWDMdQK3x8RG57PF6wWSjEZ+QeXRIWBGTsP3gx9Ggwcqxt1g==
 test:
-  setting:                test_value
-  # The following will become 'secure_setting'
-  _secure_secure_setting: secure_test_value
-
+  setting: test_value
+  _secure_secure_setting: LpRUMhBOewkcn8QjwBTDLTiqFCvtDZCT16fdA7l7x22DcyE9IEdLhLC11cV3tSuesDg/R7CYVA4HpJ6Ubtg+ItSzm3VVPiGqIswLKEfFVKPNo28EhiEHvUNoyxTpVdU9fq72sLH6wNNTQALlqaACUCTCrSxQYtdjllxkr0zfVMpUSpej5jGj1vBSkscufeW2BESDCUzh3hrbCfHSjqRkINb7WBODQkM5cPFB116yG+xDPCZcKGhmFBug4YW37/gl0qfb6pMIXf1WsD47nLq0fgVGHlimZvr2RKxq0SuLuhCV2F4kmr/E8CtRe+Grm5d3mgFJ8VnOwXVuGt1RikrmWw==
 production:
-  setting:                production_value
-  # The following will become 'secure_setting'
-  _secure_secure_setting: secure_production_value
+  setting: production_value
+  _secure_secure_setting: QKc7XLPaIQafJTOAJuPscuuyPC1mWQkad2NsMM9BIJ3vlkcGTQvE/j4o31XRy7V3OpxSVmg3NlDZV46vSGNj3TfpiV3nG9zRv+ZAiOplEUaYOOYrqxeVTOhX71Y99oI8fDA6CLRy1Edhd9/6NJmIhUYp1C30yd+DB4dD9YlXf++N5Vmq6IgTRAwbcftqFWAeJ28Wz0XO+nnB1D1ErqjsnDjyu8JB7CoFtW4D1m2piipydJeNpfGEFTOpcAmokj0gzjoIyZtTn1qTPPOBog1Qmrsbxgx0jEQo5Z2heYyeiogWw/5BcZxlVNHoIwrDIceiEamIQ9aTYb23WHnfn6UgTA==
