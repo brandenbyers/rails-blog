@@ -1,5 +1,21 @@
 require "spec_helper"
 
 describe UserMailer do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'welcome email' do
+
+    let(:user) { create.user }
+    let(:mail) { UserMailer.welcome(user) }
+
+    it 'sets subject' do
+      expect(mail.subject).to eq "Welcome"
+    end
+
+    it 'sets the receipient' do
+     expect(mail.to).to include user.email
+    end
+
+    it 'sets the body' do
+      expect(mail.body.encoded).to include "registered"
+    end
+  end
 end
