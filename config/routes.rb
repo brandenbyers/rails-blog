@@ -3,6 +3,8 @@ Blog::Application.routes.draw do
   resources :posts do
     resources :comments
   end
-    
+
+  match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
   root 'welcome#index'
 end
